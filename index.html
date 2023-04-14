@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FYP Project Website</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Solway:300,regular,500,700,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/emoji/48/null/soccer-ball-emoji.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="full-body">
+      <nav class="nav-bar">
+        <div class="brand-name">
+          <div class="brand-image">
+            <img
+              src="https://img.icons8.com/emoji/48/null/soccer-ball-emoji.png"
+              alt="Brand Name"
+            />
+          </div>
+          <h1>Green Cleats</h1>
+        </div>
+        <div class="topnav brand-body" id="myTopnav">
+          <a href="#section1">Home</a>
+          <a href="#section2">Features</a>
+          <a href="#section3">Grounds</a>
+          <a href="#section4">Testimonial</a>
+          <a id="nav-download-button" href="#section5">Download</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </nav>
+
+      <section class="section-1" id="section1">
+        <div class="main-image">
+          <embed src="ground1.svg" />
+        </div>
+        <div class="ground-search">
+          <select name="location" id="">
+            <option value="karachi">Karachi</option>
+            <option value="hyderabad">Hyderabad</option>
+          </select>
+          <select name="ground_name" id="">
+            <option value="karachi-ground">Karachi Ground</option>
+            <option value="hyderabad-ground">Hyderabad Ground</option>
+          </select>
+          <input
+            type="datetime-local"
+            name="ground_name"
+            id="ground_name"
+            placeholder="Ground Name"
+          />
+          <button>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/54/54481.png"
+              alt=""
+              width="15px"
+            />Search
+          </button>
+        </div>
+      </section>
+      <section class="section-2" id="section2">
+        <div class="features-container">
+          <div class="features-cards">
+            <div class="card">
+              <h2>Looking For Trainer</h2>
+              <embed class="football-player-card" src="football player.svg" />
+            </div>
+
+            <div class="card">
+              <form class="card-form" action="">
+                <div class="card-form-heading">
+                  <span class="find">FIND</span>
+                  <span class="your">YOUR</span>
+                  <span class="trainer">TRAINER</span>
+                </div>
+                <select name="ground" id="grounds">
+                  <option value="ground1">Ground 1</option>
+                  <option value="ground2">Ground 2</option>
+                  <option value="ground3">Ground 3</option>
+                  <option value="ground4">Ground 4</option>
+                </select>
+                <input type="date" name="date" id="date" />
+                <input type="submit" value="Booking" />
+                <!-- </div> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-3" id="section3">
+        <div class="slider-wrapper">
+          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+
+          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+
+          <ul class="slides-container" id="slides-container">
+            <li class="slide ground-images-container">
+              <!-- <div class="ground-image">
+                <img
+                  src="https://img.freepik.com/premium-photo/football-stadium-with-stands-full-fans-waiting-night-game-d-rendering_207634-4274.jpg?w=2000"
+                  alt="Ground Image"
+                />
+                <h4>Karachi</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div> -->
+              <div class="ground-image">
+                <img
+                  src="https://media.istockphoto.com/id/533861572/photo/football-in-the-sunset.jpg?b=1&s=170667a&w=0&k=20&c=4HZznbK1-n2ZWUFYqvh86j9-FKMMHWsx9ELrEnDJYVc="
+                  alt="Ground Image"
+                />
+                <h4>Hyderabad</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div>
+              <div class="ground-image">
+                <img
+                  src="data:image/jpeg;base64,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"
+                  alt="Ground Image"
+                />
+                <h4>Rawalpindi</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div>
+            </li>
+            <li class="slide ground-images-container">
+              <!-- <div class="ground-image">
+                <img
+                  src="https://en.reformsports.com/oxegrebi/2022/04/artificial-grass-on-football-pitch.jpeg"
+                  alt="Ground Image"
+                />
+                <h4>Ghotki</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div> -->
+              <div class="ground-image">
+                <img
+                  src="https://www.syngentaturf.co.uk/sites/g/files/zhg631/f/styles/syngenta_large/public/2021/06/09/1024_x_576_football_stadium_image.jpg?itok=GzlmVwJF"
+                  alt="Ground Image"
+                />
+                <h4>Sukkur</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div>
+              <div class="ground-image">
+                <img
+                  src="https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="Ground Image"
+                />
+                <h4>Sukkur</h4>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <button>Book Now</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-4" id="section4">
+        <div class="testimonial-container">
+          <div class="testimonial-slider-wrapper">
+            <button
+              class="testimonial-slide-arrow"
+              id="testimonial-slide-arrow-prev"
+            >
+              &#8249;
+            </button>
+
+            <button
+              class="testimonial-slide-arrow"
+              id="testimonial-slide-arrow-next"
+            >
+              &#8250;
+            </button>
+
+            <ul
+              class="testimonial-slides-container"
+              id="testimonial-slides-container"
+            >
+              <li class="testimonial-slide testimonial-main-container">
+                <div class="testimonial">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8C0eZ51cUVq9NO5x1H7Avc0eOMZrACwC_gIYztkQCcjMX_Ma5qf1fNWkSAoyU00YASkQ&usqp=CAU"
+                    alt=""
+                  />
+                  <h2>Aadesh Kumar</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable
+                  </p>
+                </div>
+              </li>
+              <li class="testimonial-slide testimonial-main-container">
+                <div class="testimonial">
+                  <img
+                    src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg"
+                    alt=""
+                  />
+                  <h2>Shivam Kumar</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable
+                  </p>
+                </div>
+              </li>
+              <li class="testimonial-slide testimonial-main-container">
+                <div class="testimonial">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8C0eZ51cUVq9NO5x1H7Avc0eOMZrACwC_gIYztkQCcjMX_Ma5qf1fNWkSAoyU00YASkQ&usqp=CAU"
+                    alt=""
+                  />
+                  <h2>Rahul Kumar</h2>
+                  <p>
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-5" id="section5">
+        <div class="download-container">
+          <div class="download-cards">
+            <div class="parent-download-card">
+              <div class="child-download-card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdquOAq3UT002IiZK3L5p_73l9Pth2RxBT_g&usqp=CAU"
+                  alt="Android QR Code"
+                />
+                <div class="download-button">
+                  <img
+                    src="https://pbs.twimg.com/media/FYhiQs3XkAM6lPS?format=jpg&name=large"
+                  />
+                  <div class="download-link">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="parent-download-card">
+              <div class="child-download-card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdquOAq3UT002IiZK3L5p_73l9Pth2RxBT_g&usqp=CAU"
+                  alt="Android QR Code"
+                />
+                <div class="download-button">
+                  <img
+                    src="https://www.pngitem.com/pimgs/m/59-590506_apple-logo-png-apple-white-icon-png-transparent.png"
+                    alt="Apple Download Link"
+                  />
+                  <div class="download-link">
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US"
+                      target="_blank"
+                      >Download Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-6" id="section6">
+        <div class="links-container">
+          <div class="links1">
+            <a href=""> Home </a>
+            <a href=""> About Us </a>
+            <a href=""> Contact Us </a>
+          </div>
+          <div class="links2">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Youtube</a>
+            <a href="">LinkedIn</a>
+            <a href="">Whatsapp</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+<script>
+  // Ground Images
+  const slidesContainer = document.getElementById("slides-container");
+  const slide = document.querySelector(".ground-image");
+  const prevButton = document.getElementById("slide-arrow-prev");
+  const nextButton = document.getElementById("slide-arrow-next");
+  let scrollRight = true;
+  let scrollTime = 0;
+  nextButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth * 2;
+    slidesContainer.scrollLeft += slideWidth;
+  });
+  prevButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth * 2;
+    slidesContainer.scrollLeft -= slideWidth;
+  });
+  setInterval(() => {
+    if (scrollRight) {
+      slideWidth = slide.clientWidth * 2;
+      slidesContainer.scrollLeft += slideWidth;
+      scrollTime += 1;
+      if (scrollTime === 3) {
+        scrollRight = false;
+      }
+    } else {
+      slideWidth = slide.clientWidth * 2;
+      slidesContainer.scrollLeft -= slideWidth;
+      scrollTime -= 1;
+      if (scrollTime === 0) {
+        scrollRight = true;
+      }
+    }
+  }, 2000);
+
+  // Testimonials
+  const testimonialslidesContainer = document.getElementById(
+    "testimonial-slides-container"
+  );
+  const testimonialslide = document.querySelector(".testimonial-slide");
+  const testimonialprevButton = document.getElementById(
+    "testimonial-slide-arrow-prev"
+  );
+  const testimonialnextButton = document.getElementById(
+    "testimonial-slide-arrow-next"
+  );
+  let testimonialscrollRight = true;
+  let testimonialscrollTime = 0;
+  testimonialnextButton.addEventListener("click", () => {
+    const testimonialslideWidth = testimonialslide.clientWidth;
+    testimonialslidesContainer.scrollLeft += testimonialslideWidth;
+  });
+  testimonialprevButton.addEventListener("click", () => {
+    const testimonialslideWidth = testimonialslide.clientWidth;
+    testimonialslidesContainer.scrollLeft -= testimonialslideWidth;
+  });
+  setInterval(() => {
+    if (testimonialscrollRight) {
+      testimonialslideWidth = testimonialslide.clientWidth;
+      testimonialslidesContainer.scrollLeft += testimonialslideWidth;
+      testimonialscrollTime += 1;
+      if (testimonialscrollTime === 3) {
+        testimonialscrollRight = false;
+      }
+    } else {
+      testimonialslideWidth = testimonialslide.clientWidth;
+      testimonialslidesContainer.scrollLeft -= testimonialslideWidth;
+      testimonialscrollTime -= 1;
+      if (testimonialscrollTime === 0) {
+        testimonialscrollRight = true;
+      }
+    }
+  }, 2000);
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
